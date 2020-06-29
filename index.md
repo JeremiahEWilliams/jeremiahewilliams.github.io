@@ -1,0 +1,282 @@
+<html>
+  <header>
+    <title>
+      Author Jeremiah Emerson Williams
+    </title>
+
+    <script>
+    </script>
+
+    <style>
+      body{
+        background-color: tan;
+        background-image: url("background.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+      }
+      div{
+        text-align: left;
+      }
+      h1{
+        font-family:  junicode, garamond, georgia, serif;
+        font-variant: small-caps;
+      }
+      h2{
+        text-align: center;
+      }
+      h3{
+        
+      }
+      a{
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      #bodycontainer{
+        width: 1000px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.6);
+      }
+
+      .content{
+        //visibility: hidden;
+      }
+      #new{
+        visibility: visible;
+      }
+      .alert{
+         color: red;
+         font-weight: bold;
+      }
+
+      .menu{
+        width: 100%;
+      }
+      .category{
+        text-align: center;
+        font-weight: bold;
+        font-size: x-large;
+        color: rgba(64,64,64);
+        width: 25%;
+        padding: 10px;
+        background-color: rgba(128,128,128,0.3);
+        border-style: outset;
+        border-color: rgba(128,128,128,0.2);
+        border-width: 5px;
+        cursor: pointer;
+      }
+
+      .openlib{
+        //border: 1px black solid;
+        //padding: 0;
+      }
+    </style>
+  </header>
+
+  <body>
+  <center>
+    <div id="bodycontainer">
+      <h1>
+        Jeremiah Emerson Williams &mdash; Author
+      </h1>
+
+      <table class="menu">
+        <tr>
+          <td class="category" id="newcat">
+            <span class="menubutton">
+              NEW
+            </span>
+          </td>
+          <td class="category" id="selfpubcat">
+            <span class="menubutton">
+              SELF PUBLISHING
+            </span>
+          </td>
+          <td class="category" id="openlibcat">
+            <span class="menubutton">
+              OPEN LIBRARY
+            </span>
+          </td>
+          <td class="category" id="socmedcat">
+            <span class="menubutton">
+              ABOUT+LINKS
+            </span>
+          </td>
+        </tr>
+      </table>
+
+      <div class="content" id="new">
+        <h2>
+          NEW
+        </h2>
+
+        <p class="describe">
+          Section for new releases from each category and/or news
+        </p>
+      </div>
+
+      <div class="content" id="tradpub">
+        <!--nothing to put here :(--!>
+      </div>
+
+      <div class="content" id="selfp">
+        <h2>
+          SELF PUBLICATION
+        </h2>
+
+        <p class="describe">
+          Self-Published stories can be found on <a href="https://www.amazon.com/author/jeremiahewilliams" rel="external" target="_blank">Amazon</a>
+        </p>
+
+        <table id="darkvalk" class="selfpub">
+          <tr>
+            <td>
+              <a href="https://www.amazon.com/dp/B08BDYF186" rel="external" target="_blank"><img src="darkvalk-cover.jpg" /></a>
+            </td>
+            <td>
+              <h3>
+                DARK VALKYRIE:  BEYOND RAGNAROK
+              </h3>
+              <p class="summary">
+In a world ravaged by the Twilight of the Gods, Kit is an Outrider who ventures out into the wastes of the New World on behalf of her town. There she takes up her second life as the Dark Valkyrie, a notorious viking hunter.
+</p><br/><p>
+Today, Kit's called upon to go to the Kirksons' trading post in search of a water pump. Simple, right?
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="content" id="openlib">
+        <h2>
+          OPEN LIBRARY
+        </h2>
+
+        <p class="describe">
+          Open Library titles are available to read for free with new stories every month.  Stories are grouped by world, and a given world shares
+          a consistent lore and mechancis between stories, even if those stories don't otherwise have overlaps.  Click on a banner for futher details.
+        </p>
+
+        <table id="wowc" class="openlib">
+          <tr>
+            <td>
+              <img src="wowc-banner-alt.png" title="WIZARD OF WEST CITY" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p class="summary">
+                Elijah Dunham was born in our world, but one day he woke somewhere else entirely with no recollection as to how he got there,
+                only a haunting feeling that he had done something terrible &ndash; a wrong only he can right.  So burdened was he by this guilt,
+                that his soul was infused with an antithetic &aelig;ther, that would one day manifest and he would become a Sorcerer of the Dead.
+                Yet this would only be the first of many strange powers and happenings to befall him in this familiar and foreign world.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div id="wowclisting" class="listing">
+                <p class="listingdeets">
+                  <b>Wizard of West City</b> is largely episodic, though certain tales contain events that forever shape stories thereafter.  The
+                  stories below are organized into periods punctuated by major stories.  Non-major stories within a period can be read in any order.
+                </p>
+                &emsp;<span class="story"><a target="_blank">"NECROSORCERER"</a></span> <i>(coming July 1st)</i> &mdash; &mdash; &mdash; <i>(major event)</i>
+                <br /><br />
+                &emsp;<span class="story"><a target="_blank">"WIZARD OF WEST CITY"</a></span> <i>(coming August 1st)</i> &mdash; &mdash; &mdash; <i>(major event)</i>
+                <br /><br />
+                &emsp;<span class="story"><a target="_blank">???</a><span> &mdash; &mdash; &mdash; <i>(major event)</i>
+                <br />
+                &emsp;&nbsp;&bull; <span class="story"><a href="https://drive.google.com/file/d/1ONOjBmAjB_T8NcwveQ7Z8xKxICv8voYq/view?usp=sharing" target="_blank">"A GOOD DAY"</a></span>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+        <table id="endofdays" class="openlib">
+          <tr>
+            <td>
+              <img src="endofdays-banner.png" title="END OF DAYS" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p class="summary">
+                An old king rises from his grave and conjures unto him an army of the dead that grows ever steadily under the weight
+                of their conquest across the land, that all may be put to rest, that order may at long last be achieved, that suffering
+                shall forever end and the world be laid still.<br/><br/>Do you hear him?<br/><br/>The Black King calls.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div id="endofdayslisting" class="listing">
+                <p class="listingdeets">
+                  There's currently only one finished story in this world, a short story of Greig's service in the Black King's legion.
+                </p>
+                &emsp;<span class="story"><a href="https://drive.google.com/file/d/1-Z-3YQXfNLhJT1bJUMGx6TLjzl6Oonrk/view?usp=sharing" target="_blank">"END OF DAYS"</a></span>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+        <table id="terrantula" class="openlib">
+          <tr>
+            <td>
+              <img src="terrantula-banner.png" title="TERRANTULA" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="alert">TEMPORARILY DISCONTINUED</span> <br/>
+              <p class="summary">
+                Terrantula was intended as a serial set in contemporary America in order to explore ideas that weren't commonly understood,
+                yet were of common concern.  However, as 2020 has continued on, it's become harder to understand how to write a contemporary
+                story, especially one whose themes are now part of regular conversation between normal people.  If the world ever calms down,
+                I'll try to figure out how Terrantula fits back into where we settle.  Until then, you can enjoy all both of the stories I 
+                had so far:
+              </p>
+
+              <p class="summary">
+                After a strange trip to a conference, science reporter Michael Collins returned to South Carolina to find he'd changed.
+                Can he put these changes to use for good, or does the world need Michael Collins more than it needs the Terrantula?
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div id="terrantulalisting" class="listing">
+                <p class="listingdeets">
+                  <b>Terrantula</b> is serial and meant to be read in chronological order.
+                </p>
+                &emsp;&bull; <span class="story"><a href="https://drive.google.com/file/d/1aGcyvIwQugc_S2Z6Sj3zf_g9C4YAKjBc/view?usp=sharing" target="_blank">EPISODE 1</a></span>
+                <br /><br/>
+                &emsp;&bull; <span class="story"><a href="https://drive.google.com/file/d/1ImV1gPXXQQoG89_DHa53C4kRzGMoNssy/view?usp=sharing" target="_blank">EPISODE 2</a></span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="content" id="socmed">
+        <h2>
+          ABOUT + LINKS
+        </h2>
+
+        <p class="describe">
+          I'm an author of fantasy, sci-fi, and horror with the "and" playing an important role as elements of each show up in every story,
+          be it Sam of Grayhaven's scientific approach to magic, Erebus' encounters with eldritch powers in the far future, or just general
+          unsettling atmospheres and descriptions.  My education in computer science and math, as well as my hobby of gaming, also play into
+          the way my stories are constructed and presented.
+          <br/><br/>
+          For updates on my work, follow me on <a href="https://www.facebook.com/JEWilliamsAuth/" target="_blank">Facebook</a>.  I also have a <a href="https://twitter.com/JEWilliamsAuth" target="_blank">Twitter</a>
+          and <a href="https://www.patreon.com/jeremiahemersonwilliams" target="_blank">Patreon</a> page, which you can use to support my Open Library.  I don't update these other social
+          media pages as regularly due to a lack of following, but I'll be happy to change that, given the incentive.
+        </p>
+      </div>
+
+    </div>
+  </center>
+  </body>
+</html>
