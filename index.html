@@ -4,19 +4,30 @@
       Author Jeremiah Emerson Williams
     </title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+      /*$(function(){
+        
+        $(#newcat).click(function(){
+          $(.content).hide();
+          $(#new).show();
+        });
+        
+      });*/
     </script>
 
     <style>
       body{
-        background-color: tan;
+        background-color: rgba(120,145,160);
         background-image: url("background.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center center;
+        font-size: large;
       }
       div{
         text-align: left;
+        font-size: large;
       }
       h1{
         font-family:  junicode, garamond, georgia, serif;
@@ -26,7 +37,11 @@
         text-align: center;
       }
       h3{
-        
+        font-style: italic;
+      }
+      table{
+        border-spacing: 0;
+        font-size: large;
       }
       a{
         color: black;
@@ -38,6 +53,7 @@
         width: 1000px;
         padding: 10px;
         background-color: rgba(255, 255, 255, 0.6);
+        border: 1px rgba(120,145,160,0.8) solid;
       }
 
       .content{
@@ -57,7 +73,7 @@
       .category{
         text-align: center;
         font-weight: bold;
-        font-size: x-large;
+        font-size: xx-large;
         color: rgba(64,64,64);
         width: 25%;
         padding: 10px;
@@ -68,9 +84,56 @@
         cursor: pointer;
       }
 
+      .carddesc{
+        background-image: linear-gradient(to top, rgba(255,255,255,0.8), rgba(255,255,255,0.1));
+      }
+
+      .storytable{
+        width: 100%;
+      }
+      .storycell{
+        vertical-align: top;
+      }
+      .titlecell{
+        font-size: x-large;
+        height: 0%;
+        width: 100%;
+        vertical-align: top;
+      }
+      .summarycont{
+        vertical-align: text-top;
+        height: 100%;
+      }
+      .thumbcell{
+        padding: 0;
+        width: 200;
+      }
+      .summary{
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .titleflair{
+        font-size: medium;
+        font-style: italic;
+        font-weight: normal;
+      }
+
+      .titlediv{
+        width:100%;
+        text-align: center;
+        border: 1px outset rgba(255,255,255,0.3);
+        background-color: rgba(255,255,255,0.3);
+        padding
+      }
+
       .openlib{
         //border: 1px black solid;
         //padding: 0;
+      }
+
+      span.credit{
+        font-size: medium;
+        font-style: italic;
       }
     </style>
   </header>
@@ -130,18 +193,20 @@
           Self-Published stories can be found on <a href="https://www.amazon.com/author/jeremiahewilliams" rel="external" target="_blank">Amazon</a>
         </p>
 
-        <table id="darkvalk" class="selfpub">
+        <table id="darkvalk" class="storytable">
           <tr>
-            <td>
+            <td class="thumbcell">
               <a href="https://www.amazon.com/dp/B08BDYF186" rel="external" target="_blank"><img src="darkvalk-cover.jpg" /></a>
             </td>
-            <td>
-              <h3>
-                DARK VALKYRIE:  BEYOND RAGNAROK
-              </h3>
+            <td class="storycell">
+              <a href="https://www.amazon.com/dp/B08BDYF186" rel="external" target="_blank">
+                <div class="titlediv">
+                  <h3>DARK VALKYRIE:  BEYOND RAGNAROK</h3>
+                </div>
+              </a>
               <p class="summary">
 In a world ravaged by the Twilight of the Gods, Kit is an Outrider who ventures out into the wastes of the New World on behalf of her town. There she takes up her second life as the Dark Valkyrie, a notorious viking hunter.
-</p><br/><p>
+</p><br/><p class="summary">
 Today, Kit's called upon to go to the Kirksons' trading post in search of a water pump. Simple, right?
               </p>
             </td>
@@ -166,7 +231,9 @@ Today, Kit's called upon to go to the Kirksons' trading post in search of a wate
             </td>
           </tr>
           <tr>
-            <td>
+            <td class="carddesc">
+              <span class="credit">Photo by <a href="https://unsplash.com/@cristofer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" rel="external" target="_blank">Cristofer Jeschke</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" rel="external" target="_blank">Unsplash</a></span>
+              <br/>
               <p class="summary">
                 Elijah Dunham was born in our world, but one day he woke somewhere else entirely with no recollection as to how he got there,
                 only a haunting feeling that he had done something terrible &ndash; a wrong only he can right.  So burdened was he by this guilt,
@@ -182,13 +249,79 @@ Today, Kit's called upon to go to the Kirksons' trading post in search of a wate
                   <b>Wizard of West City</b> is largely episodic, though certain tales contain events that forever shape stories thereafter.  The
                   stories below are organized into periods punctuated by major stories.  Non-major stories within a period can be read in any order.
                 </p>
-                &emsp;<span class="story"><a target="_blank">"NECROSORCERER"</a></span> <i>(coming July 1st)</i> &mdash; &mdash; &mdash; <i>(major event)</i>
-                <br /><br />
-                &emsp;<span class="story"><a target="_blank">"WIZARD OF WEST CITY"</a></span> <i>(coming August 1st)</i> &mdash; &mdash; &mdash; <i>(major event)</i>
-                <br /><br />
-                &emsp;<span class="story"><a target="_blank">???</a><span> &mdash; &mdash; &mdash; <i>(major event)</i>
-                <br />
-                &emsp;&nbsp;&bull; <span class="story"><a href="https://drive.google.com/file/d/1ONOjBmAjB_T8NcwveQ7Z8xKxICv8voYq/view?usp=sharing" target="_blank">"A GOOD DAY"</a></span>
+                <table class="storytable">
+                  <tr>
+                    <td class="thumbcell">
+                      <a target="_blank"><img src="placeholder-thumb.png" title="?"/></a>
+                    </td>
+                    <td class="storycell">
+                      <a target="_blank">
+                        <div class="titlediv">
+                          <h3>"NECROSORCERER" <span class="titleflair">(coming July 1st) &mdash; &mdash; &mdash; (major event)</span></h3>
+                        </div>
+                      </a>
+                      <p class="summary">
+                        It was only a matter of time before Eli's sorcery was discovered by the people of East City, and that time has finally come.
+                        With few other options, he travels to West City to appeal to an old friend, but the Prince of West City isn't so charmed to
+                        hear of who has come to join them.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+                <table class="storytable">
+                  <tr>
+                    <td class="thumbcell">
+                      <a target="_blank"><img src="placeholder-thumb.png" title="?"/></a>
+                    </td>
+                    <td class="storycell">
+                      <a target="_blank">
+                        <div class="titlediv">
+                          <h3>"WIZARD OF WEST CITY" <span class="titleflair">(coming August 1st) &mdash; &mdash; &mdash; (major event)</span></h3>
+                        </div>
+                      </a>
+                      <p class="summary">
+                        A tale recounting the strange events surrounding Eli's appointment to the role for which he would become known:  the Wizard of West City.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+                <table class="storytable">
+                  <tr>
+                    <td class="thumbcell">
+                      <a target="_blank"><img src="placeholder-thumb.png" title="?"/></a>
+                    </td>
+                    <td class="storycell">
+                      <a target="_blank">
+                        <div class="titlediv">
+                          <h3>??? <span class="titleflair"> &mdash; &mdash; &mdash; (major event)</span></h3>
+                        </div>
+                      </a>
+                      <p class="summary">
+                        A long-standing tradition amongst necromancers was to read the Necronomicon&mdash;a tome of secrets written by Mors
+                        himself&mdash;and to take up the Death Mark as a sign of their bond to the Eldest God.  Eli had no such need, as his magic
+                        is bound to his very soul and he could not fathom wearing a visible mark of one's blasphemy, let alone one that swears your
+                        fealty to a god.  Yet something happened that caused him to reconsider.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+                <table class="storytable">
+                  <tr>
+                    <td class="thumbcell">
+                      <a href="https://drive.google.com/file/d/1ONOjBmAjB_T8NcwveQ7Z8xKxICv8voYq/view?usp=sharing" target="_blank"><img src="agoodday-thumb.png" title="A GOOD DAY"/></a>
+                    </td>
+                    <td class="storycell">
+                      <a href="https://drive.google.com/file/d/1ONOjBmAjB_T8NcwveQ7Z8xKxICv8voYq/view?usp=sharing" target="_blank">
+                        <div class="titlediv">
+                          <h3>"A GOOD DAY"</h3>
+                        </div>
+                      </a>
+                      <p class="summary">
+                        Elijah Dunham is out on his regular travels when he stumbles upon a morbid grove sprouting from blackened soil, and a dying village at the heart of it all.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
               </div>
             </td>
           </tr>
@@ -201,7 +334,9 @@ Today, Kit's called upon to go to the Kirksons' trading post in search of a wate
             </td>
           </tr>
           <tr>
-            <td>
+            <td class="carddesc">
+              <span class="credit">Photo by <a href="https://unsplash.com/@sebastian_unrau?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" rel="external" target="_blank">Sebastian Unrau</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" rel="external" target="_blank">Unsplash</a></span>
+              <br/>
               <p class="summary">
                 An old king rises from his grave and conjures unto him an army of the dead that grows ever steadily under the weight
                 of their conquest across the land, that all may be put to rest, that order may at long last be achieved, that suffering
@@ -215,7 +350,23 @@ Today, Kit's called upon to go to the Kirksons' trading post in search of a wate
                 <p class="listingdeets">
                   There's currently only one finished story in this world, a short story of Greig's service in the Black King's legion.
                 </p>
-                &emsp;<span class="story"><a href="https://drive.google.com/file/d/1-Z-3YQXfNLhJT1bJUMGx6TLjzl6Oonrk/view?usp=sharing" target="_blank">"END OF DAYS"</a></span>
+                <table class="storytable">
+                  <tr>
+                    <td class="thumbcell">
+                      <a href="https://drive.google.com/file/d/1-Z-3YQXfNLhJT1bJUMGx6TLjzl6Oonrk/view?usp=sharing" target="_blank"><img src="endofdays-thumb.png" title="END OF DAYS"/></a>
+                    </td>
+                    <td class="storycell">
+                      <a href="https://drive.google.com/file/d/1-Z-3YQXfNLhJT1bJUMGx6TLjzl6Oonrk/view?usp=sharing" target="_blank">
+                        <div class="titlediv">
+                          <h3>"END OF DAYS"</h3>
+                        </div>
+                      </a>
+                      <p class="summary">
+                        
+                      </p>
+                    </td>
+                  </tr>
+                </table>
               </div>
             </td>
           </tr>
@@ -228,17 +379,16 @@ Today, Kit's called upon to go to the Kirksons' trading post in search of a wate
             </td>
           </tr>
           <tr>
-            <td>
-              <span class="alert">TEMPORARILY DISCONTINUED</span> <br/>
+            <td class="carddesc">
+              <span class="credit">Photo by <a href="https://unsplash.com/@crossingtheline?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" rel="external" target="_blank">Leslie Cross</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" rel="external" target="_blank">Unsplash</a></span>
+              <br/>
               <p class="summary">
+                <span class="alert">TEMPORARILY DISCONTINUED</span> <br/>
                 Terrantula was intended as a serial set in contemporary America in order to explore ideas that weren't commonly understood,
                 yet were of common concern.  However, as 2020 has continued on, it's become harder to understand how to write a contemporary
                 story, especially one whose themes are now part of regular conversation between normal people.  If the world ever calms down,
                 I'll try to figure out how Terrantula fits back into where we settle.  Until then, you can enjoy all both of the stories I 
-                had so far:
-              </p>
-
-              <p class="summary">
+                had so far:<br/><br/>
                 After a strange trip to a conference, science reporter Michael Collins returned to South Carolina to find he'd changed.
                 Can he put these changes to use for good, or does the world need Michael Collins more than it needs the Terrantula?
               </p>
@@ -250,9 +400,41 @@ Today, Kit's called upon to go to the Kirksons' trading post in search of a wate
                 <p class="listingdeets">
                   <b>Terrantula</b> is serial and meant to be read in chronological order.
                 </p>
-                &emsp;&bull; <span class="story"><a href="https://drive.google.com/file/d/1aGcyvIwQugc_S2Z6Sj3zf_g9C4YAKjBc/view?usp=sharing" target="_blank">EPISODE 1</a></span>
-                <br /><br/>
-                &emsp;&bull; <span class="story"><a href="https://drive.google.com/file/d/1ImV1gPXXQQoG89_DHa53C4kRzGMoNssy/view?usp=sharing" target="_blank">EPISODE 2</a></span>
+                <table class="storytable">
+                  <tr>
+                    <td class="thumbcell">
+                      <a href="https://drive.google.com/file/d/1aGcyvIwQugc_S2Z6Sj3zf_g9C4YAKjBc/view?usp=sharing" target="_blank"><img src="terrantula-ep1-thumb.png" title="EPISODE 1"/></a>
+                    </td>
+                    <td class="storycell">
+                      <a href="https://drive.google.com/file/d/1aGcyvIwQugc_S2Z6Sj3zf_g9C4YAKjBc/view?usp=sharing" target="_blank">
+                        <div class="titlediv">
+                          <h3>Episode 1</h3>
+                        </div>
+                      </a>
+                      <p class="summary">
+                        Michael Collins is a small-time science reporter who's gone up to NYC to attend and report on a big science conference happening there.<br/><br/>
+                        When he wakes up the Sunday after, he can't remember the night before, but he's been given strange, new powers in exchange.  Upon his safe return to South Carolina, it's up to him not only to figure out what his new powers can do, but what he should do with them.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+                <table class="storytable">
+                  <tr>
+                    <td class="thumbcell">
+                      <a href="https://drive.google.com/file/d/1ImV1gPXXQQoG89_DHa53C4kRzGMoNssy/view?usp=sharing" target="_blank"><img src="terrantula-ep2-thumb.png" title="EPISODE 2"/></a>
+                    </td>
+                    <td class="storycell">
+                      <a href="https://drive.google.com/file/d/1ImV1gPXXQQoG89_DHa53C4kRzGMoNssy/view?usp=sharing" target="_blank">
+                        <div class="titlediv">
+                          <h3>Episode 2</h3>
+                        </div>
+                      </a>
+                      <p class="summary">
+                        MC's future as a science reporter continues to grow brighter with the addition of new segments and a new contact with strange new ideas, but his future as Terrantula looks rather more grim.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
               </div>
             </td>
           </tr>
@@ -276,6 +458,7 @@ Today, Kit's called upon to go to the Kirksons' trading post in search of a wate
         </p>
       </div>
 
+    <br/><br/><span class="credit">Background photo by <a href="https://unsplash.com/@kalenemsley?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" rel="external" target="_blank">Kalen Emsley</a> on <a href="/s/photos/mountain?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" rel="external" target="_blank">Unsplash</a></span>
     </div>
   </center>
   </body>
