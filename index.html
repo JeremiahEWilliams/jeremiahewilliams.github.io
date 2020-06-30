@@ -6,14 +6,34 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-      /*$(function(){
-        
-        $(#newcat).click(function(){
-          $(.content).hide();
-          $(#new).show();
+      $(function(){
+
+        $(".content").hide();
+        $(".listing").hide();
+        $("#new").show();
+
+        //change the bg of the menu options on-hover
+        $(".category").hover(function(){
+          $(this).css("background-image", "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.8), rgba(255,255,255,0.1))");
+          }, function(){
+          $(this).css("background-image", "linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.1), rgba(255,255,255,0.8))");
+        });
+
+        //Jerry rigged content selector
+        $(".category").click(function(){
+          var newid = this.id;
+          newid = "#" + newid.slice(0, newid.length - 3);
+          $(".content").hide();
+          $(newid).show();
+        });
+
+        $(".openlib").click(function(){
+          var newid = this.id;
+          newid = "#" + newid + "listing";
+          $(newid).toggle();
         });
         
-      });*/
+      });
     </script>
 
     <style>
@@ -60,7 +80,7 @@
         //visibility: hidden;
       }
       #new{
-        visibility: visible;
+        //visibility: visible;
       }
       .alert{
          color: red;
@@ -73,14 +93,19 @@
       .category{
         text-align: center;
         font-weight: bold;
-        font-size: xx-large;
-        color: rgba(64,64,64);
+        font-size: x-large;
+        //color: rgba(64,64,64);
         width: 25%;
         padding: 10px;
-        background-color: rgba(128,128,128,0.3);
+        
+        background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.1), rgba(255,255,255,0.8));
+        border-left: 1px solid rgba(64,64,64,0.8);
+        border-right: 1px solid rgba(64,64,64,0.8);
+        
+        /*background-color: rgba(128,128,128,0.3);
         border-style: outset;
         border-color: rgba(128,128,128,0.2);
-        border-width: 5px;
+        border-width: 5px;*/
         cursor: pointer;
       }
 
@@ -184,7 +209,7 @@
         <!--nothing to put here :(--!>
       </div>
 
-      <div class="content" id="selfp">
+      <div class="content" id="selfpub">
         <h2>
           SELF PUBLICATION
         </h2>
@@ -206,7 +231,7 @@
               </a>
               <p class="summary">
 In a world ravaged by the Twilight of the Gods, Kit is an Outrider who ventures out into the wastes of the New World on behalf of her town. There she takes up her second life as the Dark Valkyrie, a notorious viking hunter.
-</p><br/><p class="summary">
+<br/><br/>
 Today, Kit's called upon to go to the Kirksons' trading post in search of a water pump. Simple, right?
               </p>
             </td>
