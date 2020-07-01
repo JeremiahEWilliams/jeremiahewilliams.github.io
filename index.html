@@ -8,9 +8,16 @@
     <script>
       $(function(){
 
-        $(".content").hide();
-        $(".listing").hide();
-        $("#new").show();
+        {
+          $(".content").hide();
+          $(".listing").hide();
+
+          var x = document.URL;
+          if(x.endsWith("x"))
+            $("#openlib").show();
+          else
+            $("#new").show();
+        }
 
         //change the bg of the menu options on-hover
         $(".category").hover(function(){
@@ -32,12 +39,18 @@
           newid = "#" + newid + "listing";
           $(newid).toggle();
         });
+
+        $("#openliblinkcopy").click(function(){
+          document.getElementById("openliblinkcopy").select();
+          document.execCommand("copy");
+        });
         
       });
     </script>
 
     <style>
       body{
+        font-family:  georgia, serif;
         background-color: rgba(120,145,160);
         background-image: url("background.jpg");
         background-repeat: no-repeat;
@@ -50,14 +63,29 @@
         font-size: large;
       }
       h1{
-        font-family:  junicode, garamond, georgia, serif;
+        font-family:  garamond, georgia, serif;
         font-variant: small-caps;
+        font-size: 3em;
+        border-bottom: 4px solid black;
+        margin-bottom: 0;
       }
       h2{
+        font-family:  garamond, georgia, serif;
+        font-size: 2em;
         text-align: center;
+        border-bottom: 2px solid black;
       }
       h3{
+        font-family:  georgia, serif;
+        font-size: xx-large;
         font-style: italic;
+      }
+      h4{
+        font-family:  garamond, georgia, serif;
+        font-size: xx-large;
+        text-align: center;
+        border-bottom: 2px solid black;
+        margin-bottom: 0;
       }
       table{
         border-spacing: 0;
@@ -68,6 +96,11 @@
         font-weight: bold;
         text-decoration: none;
       }
+      button{
+        font-family: serif;
+        font-size: small;
+        text-align: center;
+      }
 
       #bodycontainer{
         width: 1000px;
@@ -76,14 +109,9 @@
         border: 1px rgba(120,145,160,0.8) solid;
       }
 
-      .content{
-        //visibility: hidden;
-      }
-      #new{
-        //visibility: visible;
-      }
       .alert{
          color: red;
+         font-size: x-large;
          font-weight: bold;
       }
 
@@ -115,6 +143,7 @@
 
       .storytable{
         width: 100%;
+        margin: 20px 0px;
       }
       .storycell{
         vertical-align: top;
@@ -132,15 +161,29 @@
       .thumbcell{
         padding: 0;
         width: 200;
+        vertical-align: top;
       }
       .summary{
         padding-left: 20px;
         padding-right: 20px;
+        padding-bottom: 20px;
       }
       .titleflair{
         font-size: medium;
         font-style: italic;
         font-weight: normal;
+      }
+      .listing{
+        width: calc(100% - 30px);
+        margin: 10px;
+        margin-top: 0;
+        background-color: rgba(255,255,255,0.3);
+        border: 1px rgba(120,145,160,0.8) solid;
+      }
+      .listingdeets{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
       }
 
       .titlediv{
@@ -148,7 +191,7 @@
         text-align: center;
         border: 1px outset rgba(255,255,255,0.3);
         background-color: rgba(255,255,255,0.3);
-        padding
+        //padding
       }
 
       .openlib{
@@ -160,6 +203,13 @@
         font-size: medium;
         font-style: italic;
       }
+
+      #subtitle{
+        font-family:  georgia, serif;
+        text-align: right;
+        font-size: 3em;
+        font-style: italic;
+      }
     </style>
   </header>
 
@@ -167,8 +217,11 @@
   <center>
     <div id="bodycontainer">
       <h1>
-        Jeremiah Emerson Williams &mdash; Author
+        JEREMIAH EMERSON WILLIAMS
       </h1>
+      <div id="subtitle">
+        Author
+      </div>
 
       <table class="menu">
         <tr>
@@ -179,7 +232,7 @@
           </td>
           <td class="category" id="selfpubcat">
             <span class="menubutton">
-              SELF PUBLISHING
+              BOOKS
             </span>
           </td>
           <td class="category" id="openlibcat">
@@ -201,21 +254,77 @@
         </h2>
 
         <p class="describe">
-          Section for new releases from each category and/or news
+          New material this month includes this webpage!  No more awkward navigation of a google drive folder just to see what's available to read.
+          <br/><br/>
+          July's Open Library release is <a href="https://drive.google.com/file/d/1CkWDqvD2JeKIUB7CGwqCo1JDuGy7EYAP/view?usp=sharing" target="_blank">"Necrosorcerer"</a>&mdash;the latest installment for the WIZARD OF WEST CITY series.
+          <br/><br/>
+          Other relatively new works include <i><a href="https://www.amazon.com/dp/B08BDYF186" rel="external" target="_blank">DARK VALKYRIE</a></i>, now available on <a href="https://www.amazon.com/dp/B08BDYF186" rel="external" target="_blank">Amazon</a> and last month's Open Library release, <a href="https://drive.google.com/file/d/1-Z-3YQXfNLhJT1bJUMGx6TLjzl6Oonrk/view?usp=sharing" target="_blank">"End of Days"</a>.
         </p>
-      </div>
-
-      <div class="content" id="tradpub">
-        <!--nothing to put here :(--!>
+                <table class="storytable">
+                  <tr>
+                    <td class="thumbcell">
+                      <a href="https://drive.google.com/file/d/1CkWDqvD2JeKIUB7CGwqCo1JDuGy7EYAP/view?usp=sharing" target="_blank"><img src="necrosorcerer-thumb.png" title="NECROSORCERER"/></a>
+                    </td>
+                    <td class="storycell">
+                      <a href="https://drive.google.com/file/d/1CkWDqvD2JeKIUB7CGwqCo1JDuGy7EYAP/view?usp=sharing" target="_blank">
+                        <div class="titlediv">
+                          <h3>"NECROSORCERER"</h3>
+                        </div>
+                      </a>
+                      <p class="summary">
+                        It was only a matter of time before Eli's sorcery was discovered by the people of East City, and that time has finally come.
+                        With few other options, he travels to West City to appeal to an old friend, but the Prince of West City isn't so charmed to
+                        hear of who has come to join them.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+        <table id="darkvalk" class="storytable">
+          <tr>
+            <td class="thumbcell">
+              <a href="https://www.amazon.com/dp/B08BDYF186" rel="external" target="_blank"><img src="darkvalk-cover.jpg" /></a>
+            </td>
+            <td class="storycell">
+              <a href="https://www.amazon.com/dp/B08BDYF186" rel="external" target="_blank">
+                <div class="titlediv">
+                  <h3>DARK VALKYRIE:  BEYOND RAGNAROK</h3>
+                </div>
+              </a>
+              <p class="summary">
+In a world ravaged by the Twilight of the Gods, Kit is an Outrider who ventures out into the wastes of the New World on behalf of her town. There she takes up her second life as the Dark Valkyrie, a notorious viking hunter.
+<br/><br/>
+Today, Kit's called upon to go to the Kirksons' trading post in search of a water pump. Simple, right?
+              </p>
+            </td>
+          </tr>
+        </table>
+                <table class="storytable">
+                  <tr>
+                    <td class="thumbcell">
+                      <a href="https://drive.google.com/file/d/1-Z-3YQXfNLhJT1bJUMGx6TLjzl6Oonrk/view?usp=sharing" target="_blank"><img src="endofdays-thumb.png" title="END OF DAYS"/></a>
+                    </td>
+                    <td class="storycell">
+                      <a href="https://drive.google.com/file/d/1-Z-3YQXfNLhJT1bJUMGx6TLjzl6Oonrk/view?usp=sharing" target="_blank">
+                        <div class="titlediv">
+                          <h3>"END OF DAYS"</h3>
+                        </div>
+                      </a>
+                      <p class="summary">
+                        A short story that takes the perspective of a skeleton in a Necromancer's army and all the oddities and horrors that come with it.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
       </div>
 
       <div class="content" id="selfpub">
         <h2>
-          SELF PUBLICATION
+          BOOKS
         </h2>
 
         <p class="describe">
-          Self-Published stories can be found on <a href="https://www.amazon.com/author/jeremiahewilliams" rel="external" target="_blank">Amazon</a>
+          Listed here are stories either published by myself via <a href="https://www.amazon.com/author/jeremiahewilliams" rel="external" target="_blank">Amazon</a>
+          or by a more traditional publisher.
         </p>
 
         <table id="darkvalk" class="storytable">
@@ -245,8 +354,13 @@ Today, Kit's called upon to go to the Kirksons' trading post in search of a wate
         </h2>
 
         <p class="describe">
+          The Open Library follows a model you're probably already familiar with via image and video artists where the content is available for free,
+          and those who wish to support the project can do so via <a href="https://www.patreon.com/jeremiahemersonwilliams" target="_blank">Patreon</a>.
+          <br/><br/>
           Open Library titles are available to read for free with new stories every month.  Stories are grouped by world, and a given world shares
           a consistent lore and mechancis between stories, even if those stories don't otherwise have overlaps.  Click on a banner for futher details.
+          <br/><br/>
+          The Open Library can be directly linked using this URL (click to copy):  <input id="openliblinkcopy" type="text" readonly="readonly" size="46" value="https://jeremiahewilliams.github.io/?openlib=x" />
         </p>
 
         <table id="wowc" class="openlib">
@@ -270,6 +384,7 @@ Today, Kit's called upon to go to the Kirksons' trading post in search of a wate
           <tr>
             <td>
               <div id="wowclisting" class="listing">
+                <h4>TITLE LISTING &mdash; WIZARD OF WEST CITY</h4>
                 <p class="listingdeets">
                   <b>Wizard of West City</b> is largely episodic, though certain tales contain events that forever shape stories thereafter.  The
                   stories below are organized into periods punctuated by major stories.  Non-major stories within a period can be read in any order.
@@ -277,12 +392,12 @@ Today, Kit's called upon to go to the Kirksons' trading post in search of a wate
                 <table class="storytable">
                   <tr>
                     <td class="thumbcell">
-                      <a target="_blank"><img src="placeholder-thumb.png" title="?"/></a>
+                      <a href="https://drive.google.com/file/d/1CkWDqvD2JeKIUB7CGwqCo1JDuGy7EYAP/view?usp=sharing" target="_blank"><img src="necrosorcerer-thumb.png" title="NECROSORCERER"/></a>
                     </td>
                     <td class="storycell">
-                      <a target="_blank">
+                      <a href="https://drive.google.com/file/d/1CkWDqvD2JeKIUB7CGwqCo1JDuGy7EYAP/view?usp=sharing" target="_blank">
                         <div class="titlediv">
-                          <h3>"NECROSORCERER" <span class="titleflair">(coming July 1st) &mdash; &mdash; &mdash; (major event)</span></h3>
+                          <h3>"NECROSORCERER" <span class="titleflair"> &mdash; &mdash; &mdash; (major event)</span></h3>
                         </div>
                       </a>
                       <p class="summary">
@@ -296,7 +411,7 @@ Today, Kit's called upon to go to the Kirksons' trading post in search of a wate
                 <table class="storytable">
                   <tr>
                     <td class="thumbcell">
-                      <a target="_blank"><img src="placeholder-thumb.png" title="?"/></a>
+                      <a target="_blank"><img src="wizardofwestcity-thumb.png" title="WIZARD OF WEST CITY"/></a>
                     </td>
                     <td class="storycell">
                       <a target="_blank">
@@ -372,6 +487,7 @@ Today, Kit's called upon to go to the Kirksons' trading post in search of a wate
           <tr>
             <td>
               <div id="endofdayslisting" class="listing">
+                <h4>TITLE LISTING &mdash; END OF DAYS</h4>
                 <p class="listingdeets">
                   There's currently only one finished story in this world, a short story of Greig's service in the Black King's legion.
                 </p>
@@ -387,7 +503,7 @@ Today, Kit's called upon to go to the Kirksons' trading post in search of a wate
                         </div>
                       </a>
                       <p class="summary">
-                        
+                        A short story that takes the perspective of a skeleton in a Necromancer's army and all the oddities and horrors that come with it.
                       </p>
                     </td>
                   </tr>
@@ -422,6 +538,7 @@ Today, Kit's called upon to go to the Kirksons' trading post in search of a wate
           <tr>
             <td>
               <div id="terrantulalisting" class="listing">
+                <h4>TITLE LISTING &mdash; TERRANTULA</h4>
                 <p class="listingdeets">
                   <b>Terrantula</b> is serial and meant to be read in chronological order.
                 </p>
@@ -470,7 +587,7 @@ Today, Kit's called upon to go to the Kirksons' trading post in search of a wate
         <h2>
           ABOUT + LINKS
         </h2>
-
+        <center><img src="smoke.jpg" /></center>
         <p class="describe">
           I'm an author of fantasy, sci-fi, and horror with the "and" playing an important role as elements of each show up in every story,
           be it Sam of Grayhaven's scientific approach to magic, Erebus' encounters with eldritch powers in the far future, or just general
@@ -483,7 +600,14 @@ Today, Kit's called upon to go to the Kirksons' trading post in search of a wate
         </p>
       </div>
 
-    <br/><br/><span class="credit">Background photo by <a href="https://unsplash.com/@kalenemsley?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" rel="external" target="_blank">Kalen Emsley</a> on <a href="/s/photos/mountain?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" rel="external" target="_blank">Unsplash</a></span>
+      <div id="bottomtext">
+        <br/><br/>
+        <span class="credit">Background photo by <a href="https://unsplash.com/@kalenemsley?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" rel="external" target="_blank">Kalen Emsley</a> on <a href="/s/photos/mountain?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" rel="external" target="_blank">Unsplash</a></span>
+        <br/><br/>
+        <span class="credit">Page hosted by <a href="https://github.com/" rel="external" target="_blank">GitHub</a></span>
+        <br/><br/>
+        <span class="credit">Page built by <a href="">Jeremiah Emerson Williams.</span>
+      </div>
     </div>
   </center>
   </body>
