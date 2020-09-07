@@ -1,17 +1,51 @@
 <html>
   <head>
     <style>
+      @font-face{
+        font-family: junicode;
+        src: url(Junicode.ttf);
+      }
+      @font-face{
+        font-family: freesans;
+        src: url(FreeSans.ttf);
+      }
+
+      body{
+        background-color: black;
+        color: #f0f0f0;
+        font-family: junicode, serif;
+      }
+      h1{
+        font-size: 5em;
+        margin-bottom: 0;
+      }
+      h2{
+        font-size: 3em;
+        margin-bottom: 0;
+      }
+      h3{
+        font-size: 2em;
+        margin-top: 0;
+      }
+      p{
+        font-size: 1.15em;
+      }
+
       div.bodycont{
-         width: 1000px;
+         width: 1100px;
+         padding-left: 50px; padding-right: 50px;
+         background-color: #101010;
       }
 
       p.description{
+        font-family: freesans, sans-serif;
         width: 100%;
         text-align: left;
       }
 
       td{
         text-align: center;
+        padding: 0; margin: 0;
       }
       tr.runerow{
         vertical-align: bottom;
@@ -23,14 +57,21 @@
         vertical-align: top;
       }
       td.runecell{
-        font-size: 2pc;
-        width: 2.5pc
+        font-size: 2em;
+        width: 33px;
       }
       span.runealt{
-        font-size: 1.5pc;
+        font-size: 0.75em;
       }
       td.rowlabel{
         text-align: right;
+        font-variant: small-caps;
+        font-weight: bold;
+        font-size: 1.25em;
+        font-family: freesans, sans-serif;
+      }
+      td.translitcell{
+        font-size: 1.25em;
       }
     </style>
   </head>
@@ -39,11 +80,12 @@
     <center>
     <div class="bodycont" id="bodycont">
       <h1>RUNES</h1>
+
         <p class="description">
-          Runes are the writing systems of the early Germanic languages.
+          Runes are the writing systems of the early Germanic languages. They are alphabetic, though distinct from the Greek and Roman alphabets, meaning the individual runes represent a sound, and you write the runes in sequence to form words.
         </p>
         <p class="description">
-          The following are the runic systems, starting with the oldest, as well as their LATIN alphabet counterparts.
+          Thanks to the staggered adoption of Latinized alphabets, we have a good understanding of what runes became what letters, as well as an educated guess into the original runic system, Elder Futhark.  It should be noted that a word written in Old Norse runes and an word written in an Old Norse alphabet is still written in Old Norse.
         </p>
 
         <h2>ELDER FUTHARK</h2>
@@ -207,7 +249,7 @@
         </table>
 
         <p class="description">
-          Used in most Germanic languages, gradually abandoned starting around the Migration period (325 AD). Rule of thumb is that if the language name starts with “Old” (Old Norse, Old English, etc.), it’s too young for Elder Futhark.
+          Originated sometime in the early centuries AD and gradually began to be replaced around the Migration period (325 AD) with later writing systems or a Latin alphabet. A good rule of thumb is that if the language name starts with “Old” (Old Norse, Old English, etc.), it’s too young for Elder Futhark.
         </p>
 
         <h2>FUTHORC</h2>
@@ -311,7 +353,7 @@
           </tr>
           <tr class="translitrow">
             <td class="rowlabel">
-              old english:
+              latin:
             </td>
             <td class="translitcell">
               f
@@ -407,7 +449,7 @@
         </table>
 
         <p class="description">
-          Used in Old English and Old Frisian, developed around the 400s AD.  The first G rune (&#x16b7;) eventually began to make a "y" sound, leading to the creation of a rune that was exclusively the G sound (&#x16b8;). Likewise, the C rune (&#x16b3;) eventually began making  "ch" sound, leading to the creation of a K rune (&#x16e3;). None of these runes make the sound we currently associate with "j", and the vowels (including the "y" you see there) are not pronounced the same as they are today.
+          Developed around the 400s AD for use by the Frisians (Old Frisian) and Anglo-Saxons (Old English). The C &#x16b3; and G &#x16b7; runes eventually began representing what we’d now write as “ch” and “y” sounds, respectively, which incited the development of the K &#x16e3; and G &#x16b8; runes to relieve confusion. It bears repeating that the sounds here aren’t Modern English sounds.
         </p>
 
         <h2>YOUNGER FUTHARK</h2>
@@ -522,7 +564,7 @@
             </tr>
             <tr class="translitrow">
             <td class="rowlabel">
-              old norse:
+              latin:
             </td>
             <td class="translitcell">
             f<br />v
@@ -576,7 +618,7 @@
           </table>
 
         <p class="description">
-          Used in Old Norse and Old Saxon. Younger than most people think (finished developing around 800 AD) and is very confusing to read.
+          Newer than most think, Younger Futhark finished developing around 800 AD and was used primarily in Old Norse and descendent languages, but also appears in a few other places such as Old Saxon. Consonants in Younger combine voiced and voiceless sounds into the same rune, and the vowels are… complicated.
         </p>
 
         <h2>FUTHORK</h2>
@@ -639,7 +681,7 @@
               <span class="runealt">(&#x16d5;)</span><br />&#x16d4;
             </td>
             <td class="runecell">
-              &#x16e9;
+              <span class="runealt">(&#x16b4;)</span><br />&#x16e9;
             </td>
             <td class="runecell">
               &#x16b1;
@@ -774,7 +816,7 @@
        </table>
 
         <p class="description">
-          Gradually developed from Younger Futhark from 1000 – 1200 AD and was primarily used in Scandinavia by the descendents of the Old Norse languages, and was used until runes were gradually abandoned altogether. Named Futhork after an inscription in the same vein as the others, though it appears to mostly have been written in alphabetical order, as presented here.
+          Towards the end of the Viking Age (around 1000 AD), someone started using dots to distinguish the consonants in Younger Futhark and it gradually mutated into giving each sound a distinct character, thus solving all that confusion. It was used in many descendent languages of Old Norse, and was eventually replaced by the Latin alphabet.
         </p>
     </div>
     </center>
