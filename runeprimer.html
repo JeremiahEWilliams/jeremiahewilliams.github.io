@@ -17,14 +17,20 @@
       }
       h1{
         font-size: 5em;
+        text-align: center;
+        margin: auto;
         margin-bottom: 0;
       }
       h2{
         font-size: 3em;
+        text-align: center;
+        margin: auto;
         margin-bottom: 0;
       }
       h3{
         font-size: 2em;
+        text-align: center;
+        margin: auto;
         margin-top: 0;
       }
       p{
@@ -32,9 +38,11 @@
       }
 
       div.bodycont{
+         margin: auto;
          width: 1100px;
          padding-left: 50px; padding-right: 50px;
          background-color: #101010;
+         text-align: center;
       }
 
       p.description{
@@ -43,6 +51,10 @@
         text-align: left;
       }
 
+      table{
+        margin: auto;
+        padding-bottom: 2em;
+      }
       td{
         text-align: center;
         padding: 0; margin: 0;
@@ -56,6 +68,9 @@
       tr.translitrow{
         vertical-align: top;
       }
+      tr.englishrow{
+        vertical-align: top;
+      }
       td.runecell{
         font-size: 2em;
         width: 33px;
@@ -65,9 +80,7 @@
       }
       td.rowlabel{
         text-align: right;
-        font-variant: small-caps;
-        font-weight: bold;
-        font-size: 1.25em;
+        font-size: 1em;
         font-family: freesans, sans-serif;
       }
       td.translitcell{
@@ -77,7 +90,6 @@
   </head>
 
   <body>
-    <center>
     <div class="bodycont" id="bodycont">
       <h1>RUNES</h1>
 
@@ -91,11 +103,8 @@
         <h2>ELDER FUTHARK</h2>
         <h3>(PROTO-GERMANIC)</h3>
 
-        <table class="runetable" id="elderfuthark">
+        <table class="runetable" id="elderfuthark1">
           <tr class="runerow">
-            <td class="rowlabel">
-              rune:
-            </td>
             <td class="runecell">
               &#x16a0;
             </td>
@@ -120,6 +129,37 @@
             <td class="runecell">
               &#x16b9;
             </td>
+          </tr>
+          <tr class="translitrow">
+            <td class="translitcell">
+              f
+            </td>
+            <td class="translitcell">
+              u
+            </td>
+            <td class="translitcell">
+              &thorn;
+            </td>
+            <td class="translitcell">
+              a
+            </td>
+            <td class="translitcell">
+              r
+            </td>
+            <td class="translitcell">
+              k
+            </td>
+            <td class="translitcell">
+              g
+            </td>
+            <td class="translitcell">
+              w
+            </td>
+          </tr>
+        </table>
+
+        <table class="runetable" id="elderfuthark2">
+          <tr class="runerow">
             <td class="runecell">
               &#x16ba;
             </td>
@@ -144,6 +184,37 @@
             <td class="runecell">
               <span class="runealt">(&#x10314;)</span><br />&#x16ca;
             </td>
+          </tr>
+          <tr class="translitrow">
+            <td class="translitcell">
+              h
+            </td>
+            <td class="translitcell">
+              n
+            </td>
+            <td class="translitcell">
+              i
+            </td>
+            <td class="translitcell">
+              j
+            </td>
+            <td class="translitcell">
+              &iuml;
+            </td>
+            <td class="translitcell">
+              p
+            </td>
+            <td class="translitcell">
+              z
+            </td>
+            <td class="translitcell">
+              s
+            </td>
+          </tr>
+        </table>
+
+        <table class="runetable" id="elderfuthark3">
+          <tr class="runerow">
             <td class="runecell">
               &#x16cf;
             </td>
@@ -170,57 +241,6 @@
             </td>
           </tr>
           <tr class="translitrow">
-            <td class="rowlabel">
-              latin:
-            </td>
-            <td class="translitcell">
-              f
-            </td>
-            <td class="translitcell">
-              u
-            </td>
-            <td class="translitcell">
-              &thorn;
-            </td>
-            <td class="translitcell">
-              a
-            </td>
-            <td class="translitcell">
-              r
-            </td>
-            <td class="translitcell">
-              k
-            </td>
-            <td class="translitcell">
-              g
-            </td>
-            <td class="translitcell">
-              w
-            </td>
-            <td class="translitcell">
-              h
-            </td>
-            <td class="translitcell">
-              n
-            </td>
-            <td class="translitcell">
-              i
-            </td>
-            <td class="translitcell">
-              j
-            </td>
-            <td class="translitcell">
-              &iuml;
-            </td>
-            <td class="translitcell">
-              p
-            </td>
-            <td class="translitcell">
-              z
-            </td>
-            <td class="translitcell">
-              s
-            </td>
             <td class="translitcell">
               t
             </td>
@@ -248,6 +268,7 @@
           </tr>
         </table>
 
+
         <p class="description">
           Originated sometime in the early centuries AD and gradually began to be replaced around the Migration period (325 AD) with later writing systems or a Latin alphabet. A good rule of thumb is that if the language name starts with “Old” (Old Norse, Old English, etc.), it’s too young for Elder Futhark.
         </p>
@@ -255,11 +276,8 @@
         <h2>FUTHORC</h2>
         <h3>(ANGLO-FRISIAN, ANGLO-SAXON)</h3>
 
-        <table class="runetable" id="futhorc">
+        <table class="runetable" id="futhorc1">
           <tr class="runerow">
-            <td class="rowlabel">
-              rune:
-            </td>
             <td class="runecell">
               &#x16a0;
             </td>
@@ -290,6 +308,75 @@
             <td class="runecell">
               &#x16be;
             </td>
+          </tr>
+          <tr class="translitrow">
+            <td class="translitcell">
+              f
+            </td>
+            <td class="translitcell">
+              u
+            </td>
+            <td class="translitcell">
+              &thorn;
+            </td>
+            <td class="translitcell">
+              o
+            </td>
+            <td class="translitcell">
+              r
+            </td>
+            <td class="translitcell">
+              c
+            </td>
+            <td class="translitcell">
+              g
+            </td>
+            <td class="translitcell">
+              w
+            </td>
+            <td class="translitcell">
+              h
+            </td>
+            <td class="translitcell">
+              n
+            </td>
+          </tr>
+          <tr class="englishrow">
+            <td class="englishcell">
+              (f/v)
+            </td>
+            <td class="englishcell">
+              (&#363;)
+            </td>
+            <td class="englishcell">
+              (th)
+            </td>
+            <td class="englishcell">
+              (o)
+            </td>
+            <td class="englishcell">
+              (r)
+            </td>
+            <td class="englishcell">
+              (ch)
+            </td>
+            <td class="englishcell">
+              (g/y)
+            </td>
+            <td class="englishcell">
+              (w)
+            </td>
+            <td class="englishcell">
+              (h)
+            </td>
+            <td class="englishcell">
+              (n)
+            </td>
+          </tr>
+        </table>
+
+        <table class="runetable" id="futhorc2">
+          <tr class="runerow">
             <td class="runecell">
               &#x16c1;
             </td>
@@ -320,6 +407,75 @@
             <td class="runecell">
               &#x16d7;
             </td>
+          </tr>
+          <tr class="translitrow">
+            <td class="translitcell">
+              i
+            </td>
+            <td class="translitcell">
+              j
+            </td>
+            <td class="translitcell">
+              &iuml;
+            </td>
+            <td class="translitcell">
+              p
+            </td>
+            <td class="translitcell">
+              x
+            </td>
+            <td class="translitcell">
+              s
+            </td>
+            <td class="translitcell">
+              t
+            </td>
+            <td class="translitcell">
+              b
+            </td>
+            <td class="translitcell">
+              e
+            </td>
+            <td class="translitcell">
+              m
+            </td>
+          </tr>
+          <tr class="englishrow">
+            <td class="englishcell">
+              (&#275;)
+            </td>
+            <td class="englishcell">
+              (y)
+            </td>
+            <td class="englishcell">
+              --
+            </td>
+            <td class="englishcell">
+              (p)
+            </td>
+            <td class="englishcell">
+              (x)
+            </td>
+            <td class="englishcell">
+              (s)
+            </td>
+            <td class="englishcell">
+              (t)
+            </td>
+            <td class="englishcell">
+              (b)
+            </td>
+            <td class="englishcell">
+              (&#257;)
+            </td>
+            <td class="englishcell">
+              (m)
+            </td>
+          </tr>
+        </table>
+
+        <table class="runetable" id="futhorc3">
+          <tr class="runerow">
             <td class="runecell">
               &#x16da;
             </td>
@@ -352,69 +508,6 @@
             </td>
           </tr>
           <tr class="translitrow">
-            <td class="rowlabel">
-              latin:
-            </td>
-            <td class="translitcell">
-              f
-            </td>
-            <td class="translitcell">
-              u
-            </td>
-            <td class="translitcell">
-              &thorn;
-            </td>
-            <td class="translitcell">
-              o
-            </td>
-            <td class="translitcell">
-              r
-            </td>
-            <td class="translitcell">
-              c
-            </td>
-            <td class="translitcell">
-              g
-            </td>
-            <td class="translitcell">
-              w
-            </td>
-            <td class="translitcell">
-              h
-            </td>
-            <td class="translitcell">
-              n
-            </td>
-            <td class="translitcell">
-              i
-            </td>
-            <td class="translitcell">
-              j
-            </td>
-            <td class="translitcell">
-              &iuml;
-            </td>
-            <td class="translitcell">
-              p
-            </td>
-            <td class="translitcell">
-              x
-            </td>
-            <td class="translitcell">
-              s
-            </td>
-            <td class="translitcell">
-              t
-            </td>
-            <td class="translitcell">
-              b
-            </td>
-            <td class="translitcell">
-              e
-            </td>
-            <td class="translitcell">
-              m
-            </td>
             <td class="translitcell">
               l
             </td>
@@ -446,6 +539,38 @@
               g
             </td>
           </tr>
+          <tr class="englishrow">
+            <td class="englishcell">
+              (l)
+            </td>
+            <td class="englishcell">
+              (ng)<br />(gn)
+            </td>
+            <td class="englishcell">
+              (d)
+            </td>
+            <td class="englishcell">
+              --
+            </td>
+            <td class="englishcell">
+              (a)
+            </td>
+            <td class="englishcell">
+              (a)
+            </td>
+            <td class="englishcell">
+              --
+            </td>
+            <td class="englishcell">
+              --
+            </td>
+            <td class="englishcell">
+              (k)
+            </td>
+            <td class="englishcell">
+              (g)
+            </td>
+          </tr>
         </table>
 
         <p class="description">
@@ -455,11 +580,8 @@
         <h2>YOUNGER FUTHARK</h2>
         <h3>(OLD NORSE, “VIKING RUNES”)</h3>
 
-        <table class="runetable" id="futhorc">
+        <table class="runetable" id="youngerfuthark1">
           <tr class="runerow" id="longbranch">
-            <td class="rowlabel">
-              long-branch:
-            </td>
             <td class="runecell">
               &#x16a0;
             </td>
@@ -478,6 +600,51 @@
             <td class="runecell">
               &#x16b4;
             </td>
+            </tr>
+          <tr id="shorttwig" class="runerow">
+            <td class="runecell">
+              &#x16a0;
+            </td>
+            <td class="runecell">
+              &#x16a2;
+            </td>
+            <td class="runecell">
+              &#x16a6;
+            </td>
+            <td class="runecell">
+              &#x16ad;
+            </td>
+            <td class="runecell">
+              &#x16b1;
+            </td>
+            <td class="runecell">
+              &#x16b4;
+            </td>
+          </tr>
+          <tr class="translitrow">
+            <td class="translitcell">
+              f<br />v
+            </td>
+            <td class="translitcell">
+              u<br />o
+            </td>
+            <td class="translitcell">
+              &thorn;<br />&eth;
+            </td>
+            <td class="translitcell">
+              &aogon;<br />&#491;
+            </td>
+            <td class="translitcell">
+              r
+            </td>
+            <td class="translitcell">
+              k<br />g
+            </td>
+          </tr>
+          </table>
+
+        <table class="runetable" id="youngerfuthark2">
+          <tr class="runerow" id="longbranch">
             <td class="runecell">
               &#x16bc;
             </td>
@@ -485,137 +652,104 @@
               &#x16be;
             </td>
             <td class="runecell">
-            &#x16c1;
-              </td>
-              <td class="runecell">
-            &#x16c5;
-              </td>
-              <td class="runecell">
-            &#x16cb;
-              </td>
-              <td class="runecell">
-            &#x16cf;
-              </td>
-              <td class="runecell">
-            &#x16d2;
-              </td>
-              <td class="runecell">
-            &#x16d8;
-              </td>
-              <td class="runecell">
-            &#x16da;
-              </td>
-              <td class="runecell">
-            &#x16e3;
-              </td>
-            </tr>
-            <tr id="shorttwig" class="runerow">
-            <td class="rowlabel">
-              short-twig:
+              &#x16c1;
             </td>
-              <td class="runecell">
-            &#x16a0;
-              </td>
-              <td class="runecell">
-            &#x16a2;
-              </td>
-              <td class="runecell">
-            &#x16a6;
-              </td>
-              <td class="runecell">
-            &#x16ad;
-              </td>
-              <td class="runecell">
-            &#x16b1;
-              </td>
-              <td class="runecell">
-            &#x16b4;
-              </td>
-              <td class="runecell">
-            &#x16bd;
-              </td>
-              <td class="runecell">
-            &#x16bf;
-              </td>
-              <td class="runecell">
-            &#x16c1;
-              </td>
-              <td class="runecell">
-            &#x16c6;
-              </td>
-              <td class="runecell">
-            &#x16cc;
-              </td>
-              <td class="runecell">
-            &#x16d0;
-              </td>
-              <td class="runecell">
-            &#x16d3;
-              </td>
-              <td class="runecell">
-            &#x16d9;
-              </td>
-              <td class="runecell">
-            &#x16da;
-              </td>
-              <td class="runecell">
-            &#x16e7;
-              </td>
-            </tr>
-            <tr class="translitrow">
-            <td class="rowlabel">
-              latin:
+            <td class="runecell">
+              &#x16c5;
             </td>
-            <td class="translitcell">
-            f<br />v
-            </td>
-            <td class="translitcell">
-            u<br />o
-            </td>
-            <td class="translitcell">
-            &thorn;<br />&eth;
-            </td>
-            <td class="translitcell">
-            &aogon;<br />&#491;
-            </td>
-            <td class="translitcell">
-            r
-            </td>
-            <td class="translitcell">
-            k<br />g
-            </td>
-            <td class="translitcell">
-            h
-            </td>
-            <td class="translitcell">
-            n
-            </td>
-            <td class="translitcell">
-            i<br />e
-            </td>
-            <td class="translitcell">
-            a<br />e
-            </td>
-            <td class="translitcell">
-            s
-            </td>
-            <td class="translitcell">
-            t<br />d
-            </td>
-            <td class="translitcell">
-            b<br />p
-            </td>
-            <td class="translitcell">
-            m
-            </td>
-            <td class="translitcell">
-            l
-            </td>
-            <td class="translitcell">
-            &#640;
+            <td class="runecell">
+              &#x16cb;
             </td>
           </tr>
-          </table>
+          <tr id="shorttwig" class="runerow">
+            <td class="runecell">
+              &#x16bd;
+            </td>
+            <td class="runecell">
+              &#x16bf;
+            </td>
+            <td class="runecell">
+              &#x16c1;
+            </td>
+            <td class="runecell">
+              &#x16c6;
+            </td>
+            <td class="runecell">
+              &#x16cc;
+            </td>
+          </tr>
+          <tr class="translitrow">
+            <td class="translitcell">
+              h
+            </td>
+            <td class="translitcell">
+              n
+            </td>
+            <td class="translitcell">
+              i<br />e
+            </td>
+            <td class="translitcell">
+              a<br />e
+            </td>
+            <td class="translitcell">
+              s
+            </td>
+          </tr>
+        </table>
+
+        <table class="runetable" id="youngerfuthark3">
+          <tr class="runerow" id="longbranch">
+            <td class="runecell">
+              &#x16cf;
+            </td>
+            <td class="runecell">
+              &#x16d2;
+            </td>
+            <td class="runecell">
+              &#x16d8;
+            </td>
+            <td class="runecell">
+              &#x16da;
+            </td>
+            <td class="runecell">
+              &#x16e3;
+            </td>
+          </tr>
+          <tr id="shorttwig" class="runerow">
+              <td class="runecell">
+                &#x16d0;
+              </td>
+              <td class="runecell">
+                &#x16d3;
+              </td>
+              <td class="runecell">
+                &#x16d9;
+              </td>
+              <td class="runecell">
+                &#x16da;
+              </td>
+              <td class="runecell">
+                &#x16e7;
+              </td>
+          </tr>
+          <tr class="translitrow">
+            <td class="translitcell">
+              t<br />d
+            </td>
+            <td class="translitcell">
+              b<br />p
+            </td>
+            <td class="translitcell">
+              m
+            </td>
+            <td class="translitcell">
+              l
+            </td>
+            <td class="translitcell">
+              &#640;
+            </td>
+          </tr>
+        </table>
 
         <p class="description">
           Newer than most think, Younger Futhark finished developing around 800 AD and was used primarily in Old Norse and descendent languages, but also appears in a few other places such as Old Saxon. Consonants in Younger combine voiced and voiceless sounds into the same rune, and the vowels are… complicated.
@@ -624,11 +758,8 @@
         <h2>FUTHORK</h2>
         <h3>(MEDIEVAL RUNES)</h3>
 
-        <table class="runetable" id="futhork">
+        <table class="runetable" id="futhork1">
           <tr class="runerow">
-            <td class="rowlabel">
-              rune:
-            </td>
             <td class="runecell">
               &#x16c6;
             </td>
@@ -659,6 +790,43 @@
             <td class="runecell">
               &#x16bc;
             </td>
+          </tr>
+          <tr class="translitrow">
+            <td class="translitcell">
+              a
+            </td>
+            <td class="translitcell">
+              b
+            </td>
+            <td class="translitcell">
+              c
+            </td>
+            <td class="translitcell">
+              d
+            </td>
+            <td class="translitcell">
+              &thorn;
+            </td>
+            <td class="translitcell">
+              &eth;
+            </td>
+            <td class="translitcell">
+              e
+            </td>
+            <td class="translitcell">
+              f
+            </td>
+            <td class="translitcell">
+              g
+            </td>
+            <td class="translitcell">
+              h
+            </td>
+         </tr>
+       </table>
+
+        <table class="runetable" id="futhork2">
+          <tr class="runerow">
             <td class="runecell">
               &#x16c1;
             </td>
@@ -690,6 +858,43 @@
               &#x16cb;<br />
               &#x16cc;
             </td>
+          </tr>
+          <tr class="translitrow">
+            <td class="translitcell">
+              i
+            </td>
+            <td class="translitcell">
+              k
+            </td>
+            <td class="translitcell">
+              l
+            </td>
+            <td class="translitcell">
+              m
+            </td>
+            <td class="translitcell">
+              n
+            </td>
+            <td class="translitcell">
+              o
+            </td>
+            <td class="translitcell">
+              p
+            </td>
+            <td class="translitcell">
+              q
+            </td>
+            <td class="translitcell">
+              r
+            </td>
+            <td class="translitcell">
+              s
+            </td>
+         </tr>
+       </table>
+
+        <table class="runetable" id="futhork3">
+          <tr class="runerow">
             <td class="runecell">
               &#x16d0;
             </td>
@@ -722,69 +927,6 @@
             </td>
           </tr>
           <tr class="translitrow">
-            <td class="rowlabel">
-              latin:
-            </td>
-            <td class="translitcell">
-              a
-            </td>
-            <td class="translitcell">
-              b
-            </td>
-            <td class="translitcell">
-              c
-            </td>
-            <td class="translitcell">
-              d
-            </td>
-            <td class="translitcell">
-              &thorn;
-            </td>
-            <td class="translitcell">
-              &eth;
-            </td>
-            <td class="translitcell">
-              e
-            </td>
-            <td class="translitcell">
-              f
-            </td>
-            <td class="translitcell">
-              g
-            </td>
-            <td class="translitcell">
-              h
-            </td>
-            <td class="translitcell">
-              i
-            </td>
-            <td class="translitcell">
-              k
-            </td>
-            <td class="translitcell">
-              l
-            </td>
-            <td class="translitcell">
-              m
-            </td>
-            <td class="translitcell">
-              n
-            </td>
-            <td class="translitcell">
-              o
-            </td>
-            <td class="translitcell">
-              p
-            </td>
-            <td class="translitcell">
-              q
-            </td>
-            <td class="translitcell">
-              r
-            </td>
-            <td class="translitcell">
-              s
-            </td>
             <td class="translitcell">
               t
             </td>
@@ -819,6 +961,5 @@
           Towards the end of the Viking Age (around 1000 AD), someone started using dots to distinguish the consonants in Younger Futhark and it gradually mutated into giving each sound a distinct character, thus solving all that confusion. It was used in many descendent languages of Old Norse, and was eventually replaced by the Latin alphabet.
         </p>
     </div>
-    </center>
   </body>
 </html>
