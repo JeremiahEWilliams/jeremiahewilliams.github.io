@@ -1,0 +1,183 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      function isChar(curr) {
+          if (curr >= 'A' && curr <= 'Z')
+              return true;
+          return false;
+      }
+
+      $(function(){
+        $("#convert").click(function(){
+          var inStr = document.getElementById("input").value;
+          inStr = inStr.toUpperCase();
+          var outStr = "";
+
+          for (var c = 0; c < inStr.length; c++){
+              if (isChar(inStr[c])) {
+                  switch (inStr[c]) {
+                      case 'T':
+                          if ((c + 1) < inStr.length)
+                              if (inStr[c + 1] == 'H' || inStr[c + 1] == 'h') {
+                                outStr += "&#x16a6;";
+                                 c++;
+                                 break;
+                          }
+                        outStr += "&#x16cf;";
+                        break;
+                      case 'F':
+                          outStr += "&#x16a0;";
+                          break;
+                      case 'U':
+                          outStr += "&#x16a2;";
+                          break;
+                      case 'A':
+                          outStr += "&#x16a8;";
+                          break;
+                      case 'R':
+                          outStr += "&#x16b1;";
+                          break;
+                      case 'K':
+                          outStr += "&#x16b2;";
+                          break;
+                      case 'G':
+                          outStr += "&#x16b7;";
+                          break;
+                      case 'W':
+                          outStr += "&#x16b9;";
+                          break;
+                      //---------------------------------------
+                      case 'H':
+                          outStr += "&#x16ba;";
+                          break;
+                      case 'N':
+                          outStr += "&#x16be;";
+                          break;
+                      case 'I':
+                          outStr += "&#x16c1;";
+                          break;
+                      case 'J':
+                          outStr += "&#x16c3;";
+                          break;
+                      case 'Q':
+                          outStr += "&#x16c7;";
+                          break;
+                      case 'P':
+                          outStr += "&#x16c8;";
+                          break;
+                      case 'Z':
+                          outStr += "&#x16c9;";
+                          break;
+                      case 'S':
+                          outStr += "&#x10314;";
+                          break;
+                      //---------------------------------------
+                      case 'T':
+                          outStr += "&#x16cf;";
+                          break;
+                      case 'B':
+                          outStr += "&#x16d2;";
+                          break;
+                      case 'E':
+                          outStr += "&#x16d6;";
+                          break;
+                      case 'M':
+                          outStr += "&#x16d7;";
+                          break;
+                      case 'L':
+                          outStr += "&#x16da;";
+                          break;
+                      case 'C':
+                          outStr += "&#x16dc;";
+                          break;
+                      case 'O':
+                          outStr += "&#x16df;";
+                          break;
+                      case 'D':
+                          outStr += "&#x16de;";
+                          break;
+                  }
+              }
+              else
+                  outStr += inStr[c];
+
+            }
+
+          document.getElementById("output").innerHTML = outStr;
+          if (document.getElementById("autocopy").checked) {
+              document.getElementById("output").select();
+              document.execCommand("copy");
+          }
+        });
+      });
+    </script>
+    <style>
+      textarea{
+        width: 50%;
+      }
+      button{
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ELDER FUTHARK</h1>
+    <h2>TRANSLITERATION</h2>
+    <p id="explanation">
+      This is a dumb script.  It cannot translate sounds or words.  It can barely transliterate text and assumes you already know what runes you want to use.  Once you're at that point, consult the legend below, type out the corresponding sequence, and press the "Convert" button.
+    </p>
+    <textarea id="input" rows="32">Type Here</textarea>
+    <textarea id="output" rows="32">Results Here</textarea>
+
+    <br />
+
+    <button id="convert">Convert</button>
+    <button id="copyclick">Copy</button>
+
+    <br />
+
+    <input id="autocopy" type="checkbox" /> Auto-Copy on Translate<br />
+
+    <table>
+      <tr>
+        <td>
+          <ul class="legend">
+            <li>F &rarr; &#x16a0;</li>
+            <li>U &rarr; &#x16a2;</li>
+            <li>TH &rarr; &#x16a6;</li>
+            <li>A &rarr; &#x16a8;</li>
+            <li>R &rarr; &#x16b1;</li>
+            <li>K &rarr; &#x16b2;</li>
+            <li>G &rarr; &#x16b7;</li>
+            <li>W &rarr; &#x16b9;</li>
+          </ul>
+        </td>
+        <td>
+          <ul class="legend">
+            <li>H &rarr; &#x16ba;</li>
+            <li>N &rarr; &#x16be;</li>
+            <li>I &rarr; &#x16c1;</li>
+            <li>J &rarr; &#x16c3;</li>
+            <li>Q &rarr; &#x16c7;</li>
+            <li>P &rarr; &#x16c8;</li>
+            <li>Z &rarr; &#x16c9;</li>
+            <li>S &rarr; &#x10314;</li>
+          </ul>
+        </td>
+        <td>
+          <ul class="legend">
+            <li>T &rarr; &#x16cf;</li>
+            <li>B &rarr; &#x16d2;</li>
+            <li>E &rarr; &#x16d6;</li>
+            <li>M &rarr; &#x16d7;</li>
+            <li>L &rarr; &#x16da;</li>
+            <li>C &rarr; &#x16dc;</li>
+            <li>O &rarr; &#x16df;</li>
+            <li>D &rarr; &#x16de;</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
