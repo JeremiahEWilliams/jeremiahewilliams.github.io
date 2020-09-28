@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <title>
+      Runes! by Jeremiah Emerson Williams
+    </title>
+
+    <style>
+      @font-face{
+        font-family: junicode;
+        src: url(Junicode.ttf);
+      }
+      @font-face{
+        font-family: freesans;
+        src: url(FreeSans.ttf);
+      }
+
+      body{
+        font-family:  junicode, serif;
+        background-image: url("runebg.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        font-size: large;
+      }
+      h1{
+        margin: auto;
+      }
+
+      a{
+        font-family: freesans, sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        color: #f0f0f0;
+      }
+
+      div.bodycont{
+        width: 1000;
+        margin: auto;
+        padding: 25px;
+        border: 1px solid rgba(0,0,0,0.5);
+        background-color: rgba(0,0,0,0.5);
+        color: #f0f0f0;
+      }
+      table{
+        margin: auto;
+      }
+      table.langtree{
+        text-align: center;
+        margin: auto;
+      }
+      td.langbranch{
+        width: 25%;
+        border: 1px solid black;
+      }
+      td.langroot{
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bodycont">
+      <a href="index.html">&larr; Back to Main Site</a>
+      <br /><br />
+      <h1>RUNES!</h1>
+      <p>
+        If you're reading this, you're probably from /r/runes &mdash; hi there.  I've glued this part together temporarily so I could get some stuff checked before I send bad info out into the wild.
+      </p>
+
+      <p>
+        We've got the infographics here, complete with individual cards for each rune set.
+      </p>
+
+      <table class="infographicLinks">
+        <tr>
+          <td colspan="2">
+            <a href="rune-infographic.png" target="_blank"><img src="rune-infographic-thumb.png" /></a>
+          </td>
+          <td colspan="2">
+            <a href="supp-card.png" target="_blank"><img src="supp-card-thumb.png" /></a>
+          </td>
+       </tr>
+        <tr>
+          <td>
+            <a href="efcard.png" target="_blank"><img src="efcard-thumb.png" /></a>
+          </td>
+          <td>
+            <a href="fccard.png" target="_blank"><img src="fccard-thumb.png" /></a>
+          </td>
+          <td>
+            <a href="yfcard.png" target="_blank"><img src="yfcard-thumb.png" /></a>
+          </td>
+          <td>
+            <a href="fkcard.png" target="_blank"><img src="fkcard-thumb.png" /></a>
+          </td>
+       </tr>
+     </table>
+
+      <h2>CONVERTERS</h2>
+
+      <p>
+        You might have also thought "How are all these guys typing in runes?"  I'm not, really &mdash; I'm typing into some really basic algorithms and copying the results, but since they're already in JS, here, you can use them, too:
+      </p>
+
+     <table class="langtree">
+        <tr>
+         <td class="langbranch">
+           <a href="mfconv.html">Modern Futhorc*</a>
+         </td>
+         <td class="langbranch">
+           <a href="fkconv.html">Medieval Futhork</a>
+         </td>
+       </tr>
+        <tr>
+         <td class="langbranch">
+           <a href="fcconv.html">Futhorc</a>
+         </td>
+         <td class="langbranch">
+           <a href="yfconv.html">Younger Futhark</a>
+         </td>
+       </tr>
+        <tr>
+         <td class="langroot" colspan="2">
+           <a href="efconv.html">Elder Futhark</a>
+         </td>
+       </tr>
+     </table>
+
+      <h2>MODERN FUTHORC</h2>
+      <p>
+        Modern Futhorc, as mentioned in the rune tree and Futhorc cards above, is a project I'm working on as a system of runes designed to work with Modern English.  The vowels are intended to be a cipher (i.e., the A rune should be used anywhere the A letter appears), but the rules for consonants are a bit more complex, espcially when factoring in optional runes and variants.  I'm working on a more detailed explanation, but I haven't had time and energy to do much with runes lately.
+      </p>
+    </div>
+  </body>
+</html>

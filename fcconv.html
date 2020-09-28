@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>
-      Elder Futhark Converter
+      Futhorc Converter
     </title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -36,27 +36,47 @@
                     c++;
                     break;
                   } else if (inStr[c + 1] == 'N') {
-                    outStr += "&#x16dc;";
+                    outStr += "&#x16dd;";
+                    c++;
+                    break;
+                  } else if (inStr[c + 1] == 'O') {
+                    outStr += "&#x16df;";
+                    c++;
+                    break;
+                  } else if (inStr[c + 1] == 'A') {
+                    outStr += "&#x16ab;";
+                    c++;
+                    break;
+                  } else if (inStr[c + 1] == 'E') {
+                    outStr += "&#x16e0;";
+                    c++;
+                    break;
+                  } else if (inStr[c + 1] == 'G') {
+                    outStr += "&#x16b8;";
                     c++;
                     break;
                   } else {
                     outStr += "~";
                     break;
                   }
+                else {
+                  outStr += "~";
+                  break;
+                }
               case 'F':
                 outStr += "&#x16a0;";
                 break;
               case 'U':
                 outStr += "&#x16a2;";
                 break;
-              case 'A':
-                outStr += "&#x16a8;";
+              case 'O':
+                outStr += "&#x16a9;";
                 break;
               case 'R':
                 outStr += "&#x16b1;";
                 break;
-              case 'K':
-                outStr += "&#x16b2;";
+              case 'C':
+                outStr += "&#x16b3;";
                 break;
               case 'G':
                 outStr += "&#x16b7;";
@@ -64,32 +84,43 @@
               case 'W':
                 outStr += "&#x16b9;";
                 break;
-              //---------------------------------------
               case 'H':
-                outStr += "&#x16ba;";
-                break;
+                if(document.getElementById("hToggle").checked) {
+                  outStr += "&#x16ba;";
+                  break;
+                } else {
+                  outStr += "&#x16bb;";
+                  break;
+                }
               case 'N':
                 outStr += "&#x16be;";
                 break;
+              //---------------------------------------
               case 'I':
                 outStr += "&#x16c1;";
                 break;
               case 'J':
-                outStr += "&#x16c3;";
-                break;
-              case 'Q':
-                outStr += "&#x16c7;";
-                break;
+                if(document.getElementById("jToggle").checked) {
+                  outStr += "&#x16c4;";
+                  break;
+                } else {
+                  outStr += "&#x16e1;";
+                  break;
+                }
               case 'P':
                 outStr += "&#x16c8;";
                 break;
-              case 'Z':
+              case 'X':
                 outStr += "&#x16c9;";
                 break;
               case 'S':
-                outStr += "&#x10314;";
-                break;
-              //---------------------------------------
+                if (document.getElementById("sToggle").checked) {
+                  outStr += "&#x16b4;";
+                  break;
+                } else {
+                  outStr += "&#x16cb;";
+                  break;
+                }
               case 'B':
                 outStr += "&#x16d2;";
                 break;
@@ -99,17 +130,21 @@
               case 'M':
                 outStr += "&#x16d7;";
                 break;
+              //---------------------------------------
               case 'L':
                 outStr += "&#x16da;";
                 break;
-              case 'C':
-                outStr += "&#x16dc;";
-                break;
-              case 'O':
-                outStr += "&#x16df;";
-                break;
               case 'D':
                 outStr += "&#x16de;";
+                break;
+              case 'A':
+                outStr += "&#x16aa;";
+                break;
+              case 'Y':
+                outStr += "&#x16a3;";
+                break;
+              case 'K':
+                outStr += "&#x16e3;";
                 break;
               default:
                 outStr += inStr[c];
@@ -125,8 +160,6 @@
         });
       });
     </script>
-
-
     <style>
       @font-face{
         font-family: junicode;
@@ -167,6 +200,11 @@
       table{
         margin: auto;
         vertical-align: top;
+      }
+      caption{
+        color: #f0f0f0;
+      }
+      label{
         color: #f0f0f0;
       }
 
@@ -194,7 +232,17 @@
         margin: auto;
       }
       td.buttCell{
+        color: #f0f0f0;
         text-align: center;
+      }
+      table.toggles{
+        width: 100%;
+        margin: auto;
+      }
+      td.toggles{
+        color: #f0f0f0;
+        text-align: center;
+        width: 33%;
       }
     </style>
   </head>
@@ -202,51 +250,75 @@
     <div class="bodycont">
       <a href="runes.html">&larr; Back to Runes</a>
       <br /><br />
-    <h1>ELDER FUTHARK</h1>
+    <h1>FUTHORC</h1>
     <h2>TRANSLITERATION</h2>
     <p id="explanation">
       This is a dumb script.  It cannot translate sounds or words.  It can barely transliterate text and assumes you already know what runes you want to use.  Once you're at that point, consult the legend below, type out the corresponding sequence, and press the "Convert" button.
     </p>
-    <table class="legend">
+    <table>
       <tr>
         <td>
           <ul class="legend">
             <li>F &rarr; &#x16a0;</li>
             <li>U &rarr; &#x16a2;</li>
             <li>TH &rarr; &#x16a6;</li>
-            <li>A &rarr; &#x16a8;</li>
+            <li>O &rarr; &#x16a9;</li>
             <li>R &rarr; &#x16b1;</li>
-            <li>K &rarr; &#x16b2;</li>
+            <li>C &rarr; &#x16b3;</li>
             <li>G &rarr; &#x16b7;</li>
             <li>W &rarr; &#x16b9;</li>
+            <li>H &rarr; &#x16bb;</li>
+            <li>N &rarr; &#x16be;</li>
           </ul>
         </td>
         <td>
           <ul class="legend">
-            <li>H &rarr; &#x16ba;</li>
-            <li>N &rarr; &#x16be;</li>
             <li>I &rarr; &#x16c1;</li>
-            <li>J &rarr; &#x16c3;</li>
+            <li>J &rarr; &#x16e1;</li>
             <li>~I &rarr; &#x16c7;</li>
             <li>P &rarr; &#x16c8;</li>
-            <li>Z &rarr; &#x16c9;</li>
-            <li>S &rarr; &#x10314;</li>
-          </ul>
-        </td>
-        <td>
-          <ul class="legend">
+            <li>X &rarr; &#x16c9;</li>
+            <li>S &rarr; &#x16cb;</li>
             <li>T &rarr; &#x16cf;</li>
             <li>B &rarr; &#x16d2;</li>
             <li>E &rarr; &#x16d6;</li>
             <li>M &rarr; &#x16d7;</li>
+          </ul>
+        </td>
+        <td>
+          <ul class="legend">
             <li>L &rarr; &#x16da;</li>
-            <li>~N &rarr; &#x16dc;</li>
-            <li>O &rarr; &#x16df;</li>
+            <li>~N &rarr; &#x16dd;</li>
             <li>D &rarr; &#x16de;</li>
+            <li>~O &rarr; &#x16df;</li>
+            <li>A &rarr; &#x16aa;</li>
+            <li>~A &rarr; &#x16ab;</li>
+            <li>Y &rarr; &#x16a3;</li>
+            <li>~E &rarr; &#x16e0;</li>
+            <li>K &rarr; &#x16e3;</li>
+            <li>~G &rarr; &#x16b8;</li>
           </ul>
         </td>
       </tr>
     </table>
+
+    <table class="toggles">
+      <tr>
+        <td class="toggles">
+          <input id="hToggle" type="checkbox" />
+          <label for="hToggle"> Replace: H &rarr; &#x16ba;</label>
+        </td>
+        <td class="toggles">
+          <input id="jToggle" type="checkbox" />
+          <label for="jToggle"> Replace: J &rarr; &#x16c4;</label>
+        </td>
+        <td class="toggles">
+          <input id="sToggle" type="checkbox" />
+          <label for="sToggle"> Replace: S &rarr; &#x16b4;</label>
+        </td>
+      </tr>
+    </table>
+
     <textarea id="input" rows="12">Type Here</textarea>
 
     <table class="buttonCont">
@@ -267,6 +339,7 @@
     </table>
 
     <textarea id="output" rows="12">Results Here</textarea>
+
   </div>
   </body>
 </html>

@@ -1,0 +1,365 @@
+<html>
+  <head>
+    <title>
+      Futhork Converter
+    </title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $("#convert").click(function(){
+          var inStr = document.getElementById("input").value;
+          inStr = inStr.toUpperCase();
+          var outStr = "";
+
+          for (var c = 0; c < inStr.length; c++){
+            switch (inStr[c]) {
+              case 'T':
+                if ((c + 1) < inStr.length)
+                  if (inStr[c + 1] == 'H') {
+                    outStr += "&#x16a6;";
+                    c++;
+                    break;
+                  }
+                  outStr += "&#x16d0;";
+                  break;
+              //---------------------------------------
+              case '~':
+                if ((c + 1) < inStr.length)
+                  if (inStr[c + 1] == 'D') {
+                    outStr += "&#x16a7;";
+                    c++;
+                    break;
+                  } else if (inStr[c + 1] == 'A') {
+                    if (document.getElementById("aToggle").checked) {
+                      outStr += "&#x16c6;";
+                      c++;
+                      break;
+                    } else {
+                      outStr += "&#x16c5;";
+                      c++;
+                      break;
+                    }
+                  } else if (inStr[c + 1] == 'O') {
+                    outStr += "&#x16af;";
+                    c++;
+                    break;
+                  } else {
+                    outStr += "~";
+                    break;
+                  }
+                else {
+                  outStr += "~";
+                  break;
+                }
+              //---------------------------------------
+              case 'A':
+                outStr += "&#x16c6;";
+                break;
+              case 'B':
+                outStr += "&#x16d2;";
+                break;
+              case 'C':
+                outStr += "&#x16cd;";
+                break;
+              case 'D':
+                outStr += "&#x16d1;";
+                break;
+              case 'E':
+                outStr += "&#x16c2;";
+                break;
+              case 'F':
+                outStr += "&#x16a0;";
+                break;
+              case 'G':
+                outStr += "&#x16b5;";
+                break;
+              case 'H':
+                outStr += "&#x16bc;";
+                break;
+              //---------------------------------------
+              case 'I':
+                outStr += "&#x16c1;";
+                break;
+              case 'K':
+                outStr += "&#x16b4;";
+                break;
+              case 'L':
+                outStr += "&#x16da;";
+                break;
+              case 'M':
+                outStr += "&#x16d8;";
+                break;
+              case 'N':
+                outStr += "&#x16bf;";
+                break;
+              case 'O':
+                outStr += "&#x16ae;";
+                break;
+              case 'P':
+                if (document.getElementById("pToggle").checked) {
+                  outStr += "&#x16d5;";
+                  break;
+                } else {
+                  outStr += "&#x16d4;";
+                  break;
+                }
+              case 'Q':
+                if (document.getElementById("qToggle").checked) {
+                  outStr += "&#x16b4;";
+                  break;
+                } else {
+                  outStr += "&#x16e9;";
+                  break;
+                }
+              case 'R':
+                outStr += "&#x16b1;";
+                break;
+              case 'S':
+                if (document.getElementById("sToggle").checked) {
+                  outStr += "&#x16cb;";
+                  break;
+                } else {
+                  outStr += "&#x16cc;";
+                  break;
+                }
+              //---------------------------------------
+              case 'U':
+                outStr += "&#x16a2;";
+                break;
+              case 'V':
+                if (document.getElementById("vToggle").checked) {
+                  outStr += "&#x16a2;";
+                  break;
+                } else {
+                  outStr += "&#x16a1;";
+                  break;
+                }
+              case 'W':
+                outStr += "&#x16b9;";
+                break;
+              case 'X':
+                outStr += "&#x16ea;";
+                break;
+              case 'Y':
+                if (document.getElementById("yToggle").checked) {
+                  outStr += "&#x16a4;";
+                  break;
+                } else {
+                  outStr += "&#x16e6;";
+                  break;
+                }
+              case 'Z':
+                outStr += "&#x16ce;";
+                break;
+              default:
+                outStr += inStr[c];
+                break;
+            }
+          }
+
+          document.getElementById("output").innerHTML = outStr;
+          if (document.getElementById("autocopy").checked) {
+              document.getElementById("output").select();
+              document.execCommand("copy");
+          }
+        });
+      });
+    </script>
+    <style>
+      @font-face{
+        font-family: junicode;
+        src: url(Junicode.ttf);
+      }
+      @font-face{
+        font-family: freesans;
+        src: url(FreeSans.ttf);
+      }
+
+      body{
+        font-family:  junicode, serif;
+        background-image: url("runebg.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        font-size: large;
+      }
+      h1{
+        margin: auto;
+      }
+
+      a{
+        font-family: freesans, sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        color: #f0f0f0;
+      }
+
+      div.bodycont{
+        width: 1000;
+        margin: auto;
+        padding: 25px;
+        border: 1px solid rgba(0,0,0,0.5);
+        background-color: rgba(0,0,0,0.5);
+        color: #f0f0f0;
+      }
+      table{
+        margin: auto;
+        vertical-align: top;
+      }
+      caption{
+        color: #f0f0f0;
+      }
+      label{
+        color: #f0f0f0;
+      }
+
+      ul.legend{
+        color: #f0f0f0;
+      }
+
+      textarea{
+        font-family:  junicode, serif;
+        margin: auto;
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+        color: #f0f0f0;
+      }
+      button{
+        width: 250px;
+        height: 80px;
+        background-color: #0f0f0f;
+        color: #f0f0f0;
+        border: 2px solid black;
+        border-radius: 5px;
+      }
+
+      table.buttonCont{
+        margin: auto;
+      }
+      td.buttCell{
+        color: #f0f0f0;
+        text-align: center;
+      }
+      table.toggles{
+        width: 100%;
+        margin: auto;
+      }
+      td.toggles{
+        color: #f0f0f0;
+        text-align: center;
+        width: 33%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bodycont">
+      <a href="runes.html">&larr; Back to Runes</a>
+      <br /><br />
+    <h1>FUTHORK</h1>
+    <h2>TRANSLITERATION</h2>
+    <p id="explanation">
+      This is a dumb script.  It cannot translate sounds or words.  It can barely transliterate text and assumes you already know what runes you want to use.  Once you're at that point, consult the legend below, type out the corresponding sequence, and press the "Convert" button.
+    </p>
+    <table>
+      <tr>
+        <td>
+          <ul class="legend">
+            <li>A &rarr; &#x16c6;</li>
+            <li>B &rarr; &#x16d2;</li>
+            <li>C &rarr; &#x16cd;</li>
+            <li>D &rarr; &#x16d1;</li>
+            <li>TH &rarr; &#x16a6;</li>
+            <li>~D &rarr; &#x16a7;</li>
+            <li>E &rarr; &#x16c2;</li>
+            <li>F &rarr; &#x16a0;</li>
+            <li>G &rarr; &#x16b5;</li>
+            <li>H &rarr; &#x16bc;</li>
+          </ul>
+        </td>
+        <td>
+          <ul class="legend">
+            <li>I &rarr; &#x16c1;</li>
+            <li>K &rarr; &#x16b4;</li>
+            <li>L &rarr; &#x16da;</li>
+            <li>M &rarr; &#x16d8;</li>
+            <li>N &rarr; &#x16bf;</li>
+            <li>O &rarr; &#x16ae;</li>
+            <li>P &rarr; &#x16d4;</li>
+            <li>Q &rarr; &#x16e9;</li>
+            <li>R &rarr; &#x16b1;</li>
+            <li>S &rarr; &#x16cc;</li>
+          </ul>
+        </td>
+        <td>
+          <ul class="legend">
+            <li>T &rarr; &#x16d0;</li>
+            <li>U &rarr; &#x16a2;</li>
+            <li>V &rarr; &#x16a1;</li>
+            <li>W &rarr; &#x16a5;</li>
+            <li>X &rarr; &#x16ea;</li>
+            <li>Y &rarr; &#x16e6;</li>
+            <li>Z &rarr; &#x16ce;</li>
+            <li>~A &rarr; &#x16c5;</li>
+            <li>~O &rarr; &#x16af;</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+
+    <table class="toggles">
+      <tr>
+        <td class="toggles">
+    <input id="pToggle" type="checkbox" />
+    <label for="pToggle"> Replace: P &rarr; &#x16d5;</label>
+        </td>
+        <td class="toggles">
+    <input id="qToggle" type="checkbox" />
+    <label for="qToggle"> Replace: Q &rarr; &#x16b4;</label>
+        </td>
+        <td class="toggles">
+    <input id="sToggle" type="checkbox" />
+    <label for="sToggle"> Replace: S &rarr; &#x16cb;</label>
+        </td>
+      </tr>
+      <tr>
+        <td class="toggles">
+    <input id="vToggle" type="checkbox" />
+    <label for="vToggle"> Replace: V &rarr; &#x16a2;</label>
+        </td>
+        <td class="toggles">
+    <input id="yToggle" type="checkbox" />
+    <label for="yToggle"> Replace: Y &rarr; &#x16a4;</label>
+        </td>
+        <td class="toggles">
+    <input id="aToggle" type="checkbox" />
+    <label for="aToggle"> Replace: ~A &rarr; &#x16c6;</label>
+        </td>
+      </tr>
+    </table>
+
+    <textarea id="input" rows="12">Type Here</textarea>
+
+    <table class="buttonCont">
+      <tr>
+        <td class="buttCell">
+          <button id="convert">Convert</button>
+        </td>
+        <td class="buttCell">
+          <button id="copyclick">Copy</button>
+        </td>
+      </tr>
+      <tr>
+        <td class="buttCell" colspan="2">
+          <input id="autocopy" type="checkbox" />
+          <label for="autocopy"> Auto-Copy on Translate</label>
+        </td>
+      </tr>
+    </table>
+
+    <textarea id="output" rows="12">Results Here</textarea>
+
+  </div>
+  </body>
+</html>
